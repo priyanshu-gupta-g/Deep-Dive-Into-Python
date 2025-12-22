@@ -24,3 +24,58 @@ def demonstrate_set_types():
     permissions = frozenset(["read", "execute"])
     print(f"\nType: {type(permissions)} | Result: {permissions}")
     print("Real-world Use: Dictionary keys requiring set behaviors, Fixed permission groups.")
+
+    # -------------------------------------------------------------------------
+    # C. Common Set Methods
+    # -------------------------------------------------------------------------
+    # .difference()
+    # .discard()
+    # .difference_update()
+    # .intersection()
+    # .issubset()
+    # .issuperset()
+    # .union()
+
+    # -------------------------------------------------------------------------
+    # C. Common Set Operations
+    # -------------------------------------------------------------------------
+    # Demonstrating standard methods: difference, discard, intersection, union, etc.
+    
+    my_set = {1, 2, 3, 4, 5}
+    my_set1 = {4, 5, 6}
+    your_set = {4, 5, 6, 7, 8}
+    
+    print("\n--- Set Operations Examples ---")
+    print(f"Set 1: {my_set}")
+    print(f"Set 2: {your_set}")
+
+    # 1. Difference (Elements in my_set but not in your_set)
+    # Note: .difference() returns a new set, does not modify the original.
+    diff = my_set.difference(your_set)
+    print(f"Difference (my_set - your_set): {diff}")
+
+    # 2. Discard (Remove element safely)
+    # .discard(x) removes x if present; does nothing if x is not found (unlike .remove() which raises KeyError).
+    my_set.discard(5)
+    print(f"After discard(5): {my_set}")
+
+    # 3. Intersection (Elements common to both sets)
+    # Can use .intersection() method or & operator
+    common = my_set.intersection(your_set)
+    print(f"Intersection (my_set & your_set): {common}")
+    print(f"Intersection using '&' operator: {my_set & your_set}")
+
+    # 4. Union (All unique elements from both sets)
+    # Can use .union() method or | operator
+    combined = my_set.union(your_set)
+    print(f"Union (my_set | your_set): {combined}")
+    print(f"Union using '|' operator: {my_set | your_set}")
+
+    # 5. Subset and Superset Tests
+    print(f"Is my_set1 {my_set1} a subset of your_set? {my_set1.issubset(your_set)}")
+    print(f"Is my_set1 {my_set1} a superset of your_set? {my_set1.issuperset(your_set)}")
+
+    # 6. Difference Update
+    # Removes elements found in another set from this set in-place.
+    my_set.difference_update(your_set)
+    print(f"After difference_update (removing elements from your_set): {my_set}")
