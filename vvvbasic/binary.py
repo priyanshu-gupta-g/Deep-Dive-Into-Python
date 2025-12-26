@@ -30,3 +30,30 @@ def demonstrate_binary_types():
     print(f"\nType: {type(mutable_buffer)}")
     print(f"Examples: {mutable_buffer}")
     print("Real-world Use: Low-level buffering, Binary stream manipulation.")
+
+# =============================================================================
+# INTERVIEW QUESTIONS
+# =============================================================================
+def interview_questions():
+    """
+    Q1: What is the difference between `bytes` and `bytearray`?
+    A1: `bytes` is immutable (cannot be changed), while `bytearray` is mutable 
+        (can be modified in place).
+
+    Q2: How do you convert a string to bytes?
+    A2: Use the `.encode()` method on the string (e.g., `"hello".encode('utf-8')`) 
+        or the `bytes()` constructor.
+
+    Q3: Why are bytes important in Python?
+    A3: They are essential for handling raw binary data, such as image files, 
+        network packets, and during serialization/crypto operations where text 
+        encodings can be ambiguous.
+    """
+    print("\n" + "="*30)
+    print(" INTERVIEW QUESTIONS - BINARY")
+    print("="*30)
+    print(interview_questions.__doc__)
+
+if __name__ == "__main__":
+    demonstrate_binary_types()
+    interview_questions()

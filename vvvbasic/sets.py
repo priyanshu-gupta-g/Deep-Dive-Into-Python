@@ -79,3 +79,30 @@ def demonstrate_set_types():
     # Removes elements found in another set from this set in-place.
     my_set.difference_update(your_set)
     print(f"After difference_update (removing elements from your_set): {my_set}")
+
+# =============================================================================
+# INTERVIEW QUESTIONS
+# =============================================================================
+def interview_questions():
+    """
+    Q1: What are the key properties of a Set?
+    A1: Sets are unordered, unindexed, and contain only unique elements.
+
+    Q2: Can a Set contain a List?
+    A2: No, set elements must be hashable (immutable). Lists are mutable, so 
+        they cannot be added to a set. Tuples can be added if they contain 
+        only immutable items.
+
+    Q3: What is a `frozenset`?
+    A3: It is an immutable version of a set. Because it is immutable/hashable, 
+        it can be used as a key in a dictionary or an element in another set.
+    """
+    print("\n" + "="*30)
+    print(" INTERVIEW QUESTIONS - SETS")
+    print("="*30)
+    print(interview_questions.__doc__)
+
+if __name__ == "__main__":
+    demonstrate_set_types()
+    interview_questions()
+

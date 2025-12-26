@@ -34,3 +34,30 @@ def demonstrate_numeric_types():
     my_complex = 3 + 4j
     print(f"\nType: {type(my_complex)} | Examples: {my_complex}")
     print("Real-world Use: Electrical Engineering (AC circuits), Signal Processing.")
+
+# =============================================================================
+# INTERVIEW QUESTIONS
+# =============================================================================
+def interview_questions():
+    """
+    Q1: What is the precision of a float in Python?
+    A1: Python floats are typically implemented as double-precision (64-bit) 
+        floating-point numbers, roughly 15-17 decimal digits of precision.
+
+    Q2: How does Python handle large integers?
+    A2: Python 3 handles arbitrarily large integers. The size is limited only 
+        by the available memory, unlike languages like C/Java (int/long limits).
+
+    Q3: What happens when you divide two integers?
+    A3: In Python 3, `/` always performs true division and returns a float (e.g., `5/2 -> 2.5`). 
+        `//` performs floor division and returns an integer (e.g., `5//2 -> 2`).
+    """
+    print("\n" + "="*30)
+    print(" INTERVIEW QUESTIONS - NUMERIC")
+    print("="*30)
+    print(interview_questions.__doc__)
+
+if __name__ == "__main__":
+    demonstrate_numeric_types()
+    interview_questions()
+
